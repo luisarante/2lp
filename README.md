@@ -47,8 +47,8 @@ O **2LP+ CRM - Sistema Hoteleiro** é uma plataforma desenvolvida para auxiliar 
 - ✔️ **MySQL** (Banco de Dados)
 - ✔️ **TailwindCSS** (Estilização)
 - ✔️ **Alpine.js** (Interatividade leve no front-end)
-- ✔️ **Font Awesome** ou **HeroIcons** (Ícones - opcional)
-- ✔️ **HTML5 + CSS3**
+- ✔️ **Font Awesome** (Biblioteca de ícones)
+- ✔️ **HTML5 + CSS3** (Estrutura do Front-end)
 
 ---
 

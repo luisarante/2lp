@@ -3,7 +3,49 @@
 <?php
     $title = "Login";
     $css = "../index.css";
-    include '../includes/head.php'
+    include '../includes/head.php';
+    
+    session_start();
+    if(isset($_SESSION['user']) && isset($_SESSION['senha'])){
+        header('Location:../crm/');
+    }else{
+        require_once("../conexao.php");
+        if(isset($_POST['enviar'])){
+            $user = $_POST['email'];
+            $senha = $_POST['senha'];
+    
+            $puxa  = $mysqli->query(
+                "SELECT * FROM login
+                        WHERE user_email = '$user'
+                        AND user_senha = '$senha'"
+            );
+            $mostra = $puxa->fetch_object();
+            $conta = $puxa->num_rows;
+            if($conta == 1){
+                session_start();
+                $_SESSION['user'] = $user;
+                $_SESSION['senha'] = $senha;
+                $_SESSION['nome'] = $mostra->user_nome;
+                $_SESSION['adminId'] = $mostra->user_id;
+                header("Location:../crm/");
+            }else{
+                echo "
+                    <div id='msg-erro' class='absolute bg-red-600 text-white top-11 z-80 font-semibold rounded-full flex items-center justify-center left-[50%] py-3 px-4 radious -translate-[50%]'>
+                    <span>Dados Incorretos</span>
+                    </div>
+
+                    <script>
+                    setTimeout(() => {
+                        const msg = document.getElementById('msg-erro');
+                        if (msg) {
+                        msg.style.display = 'none';
+                        }
+                    }, 4000);
+                    </script>      
+                ";
+            }
+        }
+    } 
 ?>
 <body>
     <main>
@@ -26,7 +68,7 @@
                                 <input class="border w-full py-[10px] px-2 rounded-xl text-xl" id="senha" name="senha" type="password" required/>
                                 <label class="absolute transition-200 ease rounded-xl duration-200 top-1/2 bg-white p-1 -translate-1/2 left-[31px]" for="senha">Senha</label>
                             </div>
-                            <button class="w-full bg-[#52658c] rounded-full text-white py-3" type="submit">Login</button>
+                            <button class="w-full bg-[#52658c] rounded-full text-white py-3" name="enviar" type="submit">Login</button>
                         </div>
                     </form>
                 </div>

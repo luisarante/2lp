@@ -9,12 +9,8 @@ Este é um sistema de gestão hoteleira desenvolvido em **PHP**, utilizando **Ta
 - [📝 Sobre o Projeto](#-sobre-o-projeto)
 - [🚀 Funcionalidades](#-funcionalidades)
 - [💻 Tecnologias Utilizadas](#-tecnologias-utilizadas)
-- [📦 Como Instalar e Executar](#-como-instalar-e-executar)
-- [📂 Estrutura de Pastas](#-estrutura-de-pastas)
-- [🛠️ Melhorias Futuras](#️-melhorias-futuras)
-- [🤝 Contribuição](#-contribuição)
-- [📄 Licença](#-licença)
-
+- [🤝 Contribuidores](#-contribuição)
+  
 ---
 
 ## 📝 Sobre o Projeto

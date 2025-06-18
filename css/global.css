@@ -1,22 +1,22 @@
-html{
-    scroll-behavior: smooth;
-    color: #000000;
-    overflow-x: hidden;
+html {
+  scroll-behavior: smooth;
+  color: #000000;
+  overflow-x: hidden;
 }
 
-body{
-    background-color: #f7f7f7;
-    font-family: Helvetica, sans-serif;
+body {
+  background-color: #f7f7f7;
+  font-family: Helvetica, sans-serif;
 }
 
 section {
-    scroll-margin-top: 120px;
+  scroll-margin-top: 120px;
 }
 
-#boas-vindas{
-    background-image: url('../images/imageFront001abertura.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
+#boas-vindas {
+  background-image: url("../images/imageFront001abertura.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .campo input:focus + label,
@@ -26,15 +26,29 @@ section {
 }
 
 .scroll {
-        mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-    }
-    
-    @keyframes scrollInfinito {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(calc(-33.333% - 10.66px));
-            
-        }
-    }
+  mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+}
+
+.scroll-vantagens {
+  mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+}
+
+@keyframes scrollInfinito {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-33.333% - 10.66px));
+  }
+}
+
+.carousel-card {
+  transition: max-height 0.5s ease-in-out, transform 0.3s ease;
+  max-height: 300px;
+}
+.carousel-card.expanded {
+  max-height: 1000px;
+}
+.carousel-card.expanded .read-more-indicator {
+  display: none;
+}

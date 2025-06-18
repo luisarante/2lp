@@ -7,7 +7,7 @@
 
         <a href="mais/">
             <div class="absolute bottom-3 left-[50%] -translate-[50%] z-10 text-white">
-                <h1 class="text-lg md:text-2xl font-bold rounded-lg py-1 px-2 border bg-[#52658c]">Descubra nossos planos e vantagens!</h1>
+                <h1 class="text-lg md:text-2xl font-bold rounded-lg py-1 px-2 text-center border bg-[#52658c]">Descubra nossos planos e vantagens!</h1>
             </div>
         </a>
 
